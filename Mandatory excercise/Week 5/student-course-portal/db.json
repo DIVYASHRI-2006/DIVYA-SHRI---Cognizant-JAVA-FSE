@@ -1,0 +1,50 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Java Programming",
+      "code": "CS101",
+      "credits": 4,
+      "gradeStatus": "Completed",
+      "duration": "4 Months",
+      "fees": 15000
+    },
+    {
+      "id": 2,
+      "name": "Database Management",
+      "code": "CS102",
+      "credits": 3,
+      "gradeStatus": "In Progress",
+      "duration": "3 Months",
+      "fees": 12000
+    },
+    {
+      "id": 3,
+      "name": "Web Development",
+      "code": "CS103",
+      "credits": 4,
+      "gradeStatus": "Completed",
+      "duration": "3 Months",
+      "fees": 14000
+    },
+    {
+      "id": 4,
+      "name": "Operating Systems",
+      "code": "CS104",
+      "credits": 3,
+      "gradeStatus": "Not Enrolled",
+      "duration": "4 Months",
+      "fees": 10000
+    },
+    {
+      "id": 5,
+      "name": "Data Structures",
+      "code": "CS105",
+      "credits": 4,
+      "gradeStatus": "Completed",
+      "duration": "4 Months",
+      "fees": 13000
+    }
+  ],
+  "enrollments": []
+}

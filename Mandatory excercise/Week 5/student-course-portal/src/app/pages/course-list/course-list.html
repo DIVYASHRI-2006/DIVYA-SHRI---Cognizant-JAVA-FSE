@@ -1,0 +1,49 @@
+<div class="search-box-wrapper">
+  <input
+    type="text"
+    placeholder="Search Course..."
+    [(ngModel)]="searchTerm"
+    (input)="onSearchInput()">
+
+  <button (click)="searchCourse()">
+    Search
+  </button>
+</div>
+<table border="1" cellpadding="10">
+
+    <tr>
+        <th>ID</th>
+        <th>Course Name</th>
+        <th>Code</th>
+        <th>Credits</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+
+<tr *ngFor="let course of courses" (click)="viewCourse(course.id)" style="cursor:pointer">
+
+    <td>{{course.id}}</td>
+
+    <td>{{course.name}}</td>
+
+    <td>{{course.code}}</td>
+
+    <td>{{course.credits | creditLabel}}</td>
+
+    <td>{{course.gradeStatus}}</td>
+
+    <td>
+        <button
+          (click)="toggleEnrollment(course.id); $event.stopPropagation()">
+          {{ isEnrolled(course.id) ? 'Unenroll' : 'Enroll' }}
+        </button> &nbsp;
+        <button
+          style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); color: white;"
+          (click)="deleteCourse(course.id); $event.stopPropagation()">
+          Delete
+        </button>
+    </td>
+
+</tr>
+
+</table>

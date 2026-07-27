@@ -1,0 +1,106 @@
+<div class="container">
+
+<h2>Student Enrollment Form</h2>
+
+<form #enrollForm="ngForm"
+      (ngSubmit)="onSubmit(enrollForm)">
+
+<label>Student Name</label>
+
+<input
+type="text"
+name="studentName"
+[(ngModel)]="student.studentName"
+required
+minlength="3">
+
+<br><br>
+
+<label>Email</label>
+
+<input
+type="email"
+name="email"
+[(ngModel)]="student.email"
+required
+email>
+
+<br><br>
+
+<label>Course</label>
+
+<select
+name="course"
+[(ngModel)]="student.course"
+required>
+
+<option value="">Select Course</option>
+
+<option>Angular</option>
+<option>Java</option>
+<option>Python</option>
+<option>React</option>
+
+</select>
+
+<br><br>
+
+<label>Gender</label>
+
+<br>
+
+<input
+type="radio"
+name="gender"
+value="Male"
+[(ngModel)]="student.gender">
+
+Male
+
+<input
+type="radio"
+name="gender"
+value="Female"
+[(ngModel)]="student.gender">
+
+Female
+
+<br><br>
+
+<label>Phone</label>
+
+<input
+type="text"
+name="phone"
+[(ngModel)]="student.phone"
+required>
+
+<br><br>
+
+<button
+type="submit"
+[disabled]="enrollForm.invalid">
+
+Enroll
+
+</button>
+
+</form>
+
+<div *ngIf="submitted">
+
+<h3>Enrollment Successful!</h3>
+
+<p><b>Name :</b> {{student.studentName}}</p>
+
+<p><b>Email :</b> {{student.email}}</p>
+
+<p><b>Course :</b> {{student.course}}</p>
+
+<p><b>Gender :</b> {{student.gender}}</p>
+
+<p><b>Phone :</b> {{student.phone}}</p>
+
+</div>
+
+</div>

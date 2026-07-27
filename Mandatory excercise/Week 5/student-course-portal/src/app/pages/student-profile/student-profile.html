@@ -1,0 +1,39 @@
+<div class="profile-card" appHighlight>
+
+    <h2>Student Profile</h2>
+
+    <p><strong>Name :</strong> {{student.name}}</p>
+
+    <p><strong>Roll No :</strong> {{student.rollNo}}</p>
+
+    <p><strong>Department :</strong> {{student.department}}</p>
+
+    <p><strong>Year :</strong> {{student.year}}</p>
+
+    <p><strong>Email :</strong> {{student.email}}</p>
+
+    <hr>
+
+    <h3>Enrolled Courses</h3>
+
+    <div *ngIf="enrolledCourses.length > 0; else noCourses">
+
+        <ul>
+
+            <li *ngFor="let course of enrolledCourses">
+
+                {{ course.name }} ({{ course.code }})
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <ng-template #noCourses>
+
+        <p>No courses enrolled yet.</p>
+
+    </ng-template>
+
+</div>

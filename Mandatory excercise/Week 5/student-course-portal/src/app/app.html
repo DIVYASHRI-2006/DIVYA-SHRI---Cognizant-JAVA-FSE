@@ -1,0 +1,14 @@
+<app-header></app-header>
+<app-notification></app-notification>
+
+<!-- Global Loading Spinner Overlay for Interceptor -->
+<div class="loading-overlay" *ngIf="isLoading$ | async">
+  <div class="spinner-box">
+    <div class="cyan-spinner"></div>
+    <p>Processing Request...</p>
+  </div>
+</div>
+
+<main style="padding: 15px;">
+  <router-outlet></router-outlet>
+</main>

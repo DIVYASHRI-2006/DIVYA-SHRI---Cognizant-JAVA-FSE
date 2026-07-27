@@ -1,0 +1,14 @@
+.notification {
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  padding: 16px 24px;
+  max-width: 800px;
+  margin: 20px auto 0;
+  border-radius: 12px;
+  background: rgba(6, 182, 212, 0.1);
+  backdrop-filter: blur(8px);
+  color: #00f2fe;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+}
